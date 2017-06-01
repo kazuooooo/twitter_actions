@@ -36,5 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard", "~> 2.14.0"
   spec.add_development_dependency "guard-rspec", "~> 4.7.3"
   spec.add_development_dependency "simplecov", "~> 0.12.0"
-  spec.add_dependency "twitter", "~> 6.1.0"
+  spec.add_dependency "twitter", "~> 5.16.0"
 end
