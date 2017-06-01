@@ -1,4 +1,5 @@
-module TwitterActions::Search
+# TODO: searchも作っていい感じに実装
+module TwitterActions::IncrementalSearch
 
   include TwitterActions::Base
 
@@ -8,14 +9,18 @@ module TwitterActions::Search
     self.redis = Redis.new
   end
 
-  def search(keyword)
+  def incremental_search(keyword)
     tweets = client.search(keyword,
-                           count: 100,
+                           count: 3,
                            result_type: "recent",
                            exclude: "retweets",
                            since_id: since_id(keyword))
     save_since_id(keyword, tweets)
-    tweets.to_a
+    tweets
+  end
+
+  def reset_keyword_increment(keyword)
+    redis.set(keyword, 0)
   end
 
   private
