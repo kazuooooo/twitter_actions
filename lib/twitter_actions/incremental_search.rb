@@ -11,7 +11,7 @@ module TwitterActions::IncrementalSearch
 
   def incremental_search(keyword)
     tweets = client.search(keyword,
-                           count: 3,
+                           count: 100,
                            result_type: "recent",
                            exclude: "retweets",
                            since_id: since_id(keyword))
