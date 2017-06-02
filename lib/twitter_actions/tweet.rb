@@ -10,7 +10,7 @@ module TwitterActions::Tweet
     client.update("@#{tweet.user.screen_name} #{message}", in_reply_to_status_id: tweet.id)
   end
 
-  def retweet
-
+  def retweet(tweet)
+    client.retweet(tweet)
   end
 end

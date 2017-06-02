@@ -1,7 +1,8 @@
 module TwitterActions::Follow
-
-  def follow
-
+  include TwitterActions::Base
+  #FIXME: なぜかDeadLockする
+  def follow(*users)
+    client.follow(*users)
   end
 
 end
