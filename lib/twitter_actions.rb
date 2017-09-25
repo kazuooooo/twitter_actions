@@ -13,7 +13,7 @@ module TwitterActions
   include TwitterActions::Follow
   include TwitterActions::Favorite
 
-  def initialize(redis)
+  def initialize(redis = nil) # need to set Redis if you want to use IncrementalSearch Module
     self.redis = redis
   end
 
