@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
-# stub: twitter_actions 0.2.0 ruby lib
+# stub: twitter_actions 0.2.1 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "twitter_actions"
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.metadata = { "allowed_push_host" => "TODO: Set to 'http://mygemserver.com'" } if s.respond_to? :metadata=
@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<guard>, ["~> 2.14.0"])
       s.add_dependency(%q<guard-rspec>, ["~> 4.7.3"])
       s.add_dependency(%q<simplecov>, ["~> 0.12.0"])
-      s.add_dependency(%q<twitter>, ["~> 5.16.0"])
+      s.add_dependency(%q<twitter>, ["~> 6.1.0"])
     end
   else
     s.add_dependency(%q<bundler>, ["~> 1.13"])

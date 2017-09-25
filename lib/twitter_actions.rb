@@ -4,12 +4,18 @@ require "twitter_actions/client"
 require "twitter_actions/tweet"
 require "twitter_actions/follow"
 require "twitter_actions/incremental_search"
+require "twitter_actions/favorite"
 require "twitter_actions/config"
 
 module TwitterActions
   include TwitterActions::Tweet
   include TwitterActions::IncrementalSearch
   include TwitterActions::Follow
+  include TwitterActions::Favorite
+
+  def initialize(redis)
+    self.redis = redis
+  end
 
   class << self
     def config

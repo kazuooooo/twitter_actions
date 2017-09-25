@@ -5,10 +5,6 @@ module TwitterActions::IncrementalSearch
 
   attr_accessor :redis
 
-  def initialize
-    self.redis = Redis.new
-  end
-
   def incremental_search(keyword)
     tweets = client.search(keyword,
                            count: 100,
